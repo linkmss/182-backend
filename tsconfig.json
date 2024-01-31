@@ -20,6 +20,7 @@
     "paths": {
       "@helpers/*": ["src/helpers/*"],
       "@modules/*": ["src/modules/*"],
+      "@systemModules/*": ["src/systemModules/*"],
       "@config/*": ["src/config/*"],
       "@pipe/*": ["src/pipe/*"],
       "@filter/*": ["src/filter/*"],
