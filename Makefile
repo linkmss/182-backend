@@ -9,6 +9,10 @@ install:
 dev:
 	@npm run start:dev
 
+# build
+build:
+	@npm run build
+
 # migrate prisma
 migrate:
 	@npx prisma migrate dev --name "init"
