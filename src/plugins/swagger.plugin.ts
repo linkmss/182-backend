@@ -1,6 +1,7 @@
 import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import * as basicAuth from 'express-basic-auth';
+import { swaggerAuthConfig } from '@config/env';
 
 export const useSwagger = (app: INestApplication) => {
   app.use(
@@ -8,7 +9,7 @@ export const useSwagger = (app: INestApplication) => {
     basicAuth({
       challenge: true,
       users: {
-        linkms: '123456',
+        [swaggerAuthConfig.username]: swaggerAuthConfig.password,
       },
     }),
   );
